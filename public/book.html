@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker Rental Service</title>
+    <link rel="stylesheet" href="stylesM.css">
+</head>
+<body>
+    <header>
+        <h1>Tracker Rentals</h1>
+        <p>Book you seat hassle free</p>
+    </header>
+
+    <main>
+        <section class="rates">
+            <h2>Rates</h2>
+            <img src="rates.png" alt="Taxi Rates">
+        </section>
+
+        <section class="booking">
+            <h2>Book a Taxi Now</h2>
+            <form id="bookingForm" action="/book-taxi" method="POST">
+                <label for="pickup">Pick-up Location:</label>
+                <input type="text" id="pickup" name="pickup" value="Uni Gate" disabled>
+
+                <label for="destination">Destination:</label>
+                <select id="destination" name="destination" required>
+                    <option value="" disabled selected>Select destination</option>
+                    <option value="Kandoli">Kandoli</option>
+                    <option value="Pondha">Pondha</option>
+                    <option value="Premnagar">Premnagar</option>
+                </select>
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" step="1800" required>
+
+                <label for="payment">Payment Method:</label>
+                <select id="payment" name="payment" required>
+                    <option value="" disabled selected>Select payment method</option>
+                    <option value="Cash">Cash</option>
+                    <option value="UPI">UPI</option>
+                </select>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
